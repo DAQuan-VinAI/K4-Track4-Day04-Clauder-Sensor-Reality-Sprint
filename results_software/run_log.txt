@@ -1,0 +1,26 @@
+Run time : 2026-10-05 17:21:43
+Env      : Python 3.11.16 | OpenCV 4.14.0 | numpy 2.4.6
+Command  : face_glare_benchmark.py --images ./software_glare --out ./results_software
+Detector : OpenCV Haar cascade frontalface_default | {'scaleFactor': 1.1, 'minNeighbors': 5, 'minSize': (60, 60)}
+Glare    : peak=[0, 60, 120, 180, 240] veil=[0, 10, 20, 30, 45] | IoU match >= 0.5
+So anh   : 24
+Anh co mat o baseline: 12/24 (chi tinh recall tren cac anh nay)
+
+=== KET QUA theo muc loa ===
+       recall_proxy_pct  mean_iou  face_sat_pct  face_brightness  false_pos_per_img  latency_ms
+level                                                                                          
+0                100.00      1.00          4.25           172.43                0.0        2.42
+1                 83.33      0.79         25.13           219.92                0.0        2.42
+2                  0.00      0.00         73.10           246.86                0.0        1.97
+3                  0.00      0.00         95.71           253.71                0.0        1.63
+4                  0.00      0.00         99.08           254.81                0.0        1.42
+
+=== FAILURE CASE: anh bi mat mat o muc loa thap nhat ===
+image
+04.jpg    1
+19.jpg    1
+03.jpg    2
+08.jpg    2
+13.jpg    2
+
+Output: /Users/doananhquan/Documents/AI thực chiến/Day 19/K4-Track4-Day04-Clauder-Sensor-Reality-Sprint/results_software

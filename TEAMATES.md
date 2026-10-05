@@ -44,7 +44,7 @@ Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút là
 1. Chụp **30-50 ảnh mặt** của các thành viên (xin đồng ý trước) bằng điện thoại hoặc webcam.
 2. Yêu cầu: mặt nhìn gần thẳng, đủ sáng, nhiều góc nhỏ, nhiều người khác nhau, có người đeo kính.
 3. Đặt tất cả vào thư mục `images/` trong repo.
-4. *Tùy chọn:* chụp thêm 5 ảnh **lóa thật** (đứng cạnh cửa sổ nắng hoặc rọi đèn pin vào mặt) để vào thư mục `real_glare/`. Bộ này dùng để so sánh lóa nhân tạo với lóa thật.
+4. *Tùy chọn:* chụp thêm 5 ảnh **lóa thật** (đứng cạnh cửa sổ nắng hoặc rọi đèn pin vào mặt) để vào thư mục `real_glare/`. Bộ này dùng để so sánh lóa nhân tạo với lóa thật. *Thực tế: nhóm chưa có ảnh lóa thật. 24 ảnh trong `software_glare/` là ảnh gốc được thêm lóa bằng hiệu ứng phần mềm (3 mức cho mỗi cảnh), không phải lóa thật.*
 
 ## Thành viên 3 — Đoàn Anh Quân (2A202602803): Chạy code (phút 40-70)
 
@@ -62,7 +62,7 @@ Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút là
    ```
 
 3. Kiểm tra dòng *"Anh co mat o baseline: X/Y"*. Nếu X quá thấp (dưới 70%), báo thành viên 2 chụp lại ảnh rõ hơn.
-4. Chạy thêm với ảnh lóa thật nếu có: `--images ./real_glare --out ./results_real`.
+4. Chạy thêm với ảnh lóa thật nếu có: `--images ./real_glare --out ./results_real`. *Thực tế: đã chạy với bộ lóa phần mềm: `--images ./software_glare --out ./results_software`.*
 5. Chụp màn hình terminal, rồi commit cả thư mục `results/` lên repo.
 
 ## Thành viên 4 — Nguyễn Phúc Huy (2A202602911): Benchmark và phân tích (phút 70-100)
