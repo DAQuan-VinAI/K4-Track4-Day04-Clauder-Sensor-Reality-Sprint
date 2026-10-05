@@ -2,6 +2,16 @@
 
 Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút làm việc, 3-5 phút trình bày.
 
+## Thành viên
+
+| TV | Họ tên | Mã học viên | Vai trò |
+| --- | --- | --- | --- |
+| 1 | Phạm Minh Hiếu | 2A202602919 | Research |
+| 2 | Hoàng Đức Dũng | 2A202602798 | Thu dữ liệu |
+| 3 | Đoàn Anh Quân | 2A202602803 | Chạy code |
+| 4 | Nguyễn Phúc Huy | 2A202602911 | Benchmark và phân tích |
+| 5 | Trần Thị Lan | 2A202602621 | Trình bày |
+
 ## Bảng chốt
 
 | Nhóm cần chốt | Ghi ngắn |
@@ -21,7 +31,7 @@ Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút là
 | 70-100 | TV4 phân tích, TV5 bắt đầu dựng slide |
 | 100-120 | Ghép slide, tập pitch, tất cả commit lên repo |
 
-## Thành viên 1: Research (phút 15-45)
+## Thành viên 1 — Phạm Minh Hiếu (2A202602919): Research (phút 15-45)
 
 1. Tìm hiểu 2 thứ và ghi link vào `README.md` trong repo:
    - Thuật toán Viola-Jones (Haar cascade, 2001): input là ảnh xám, output là bounding box mặt. Nó dựa vào **chênh lệch sáng tối** giữa vùng mắt và má, nên lóa làm hỏng nó.
@@ -29,14 +39,14 @@ Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút là
 2. Viết 3-4 câu "**Paper nói gì**", tách riêng với phần "nhóm đo được".
 3. Ghi limitation của Haar: chỉ bắt mặt nhìn thẳng, nhạy với ánh sáng.
 
-## Thành viên 2: Thu dữ liệu (phút 15-40)
+## Thành viên 2 — Hoàng Đức Dũng (2A202602798): Thu dữ liệu (phút 15-40)
 
 1. Chụp **30-50 ảnh mặt** của các thành viên (xin đồng ý trước) bằng điện thoại hoặc webcam.
 2. Yêu cầu: mặt nhìn gần thẳng, đủ sáng, nhiều góc nhỏ, nhiều người khác nhau, có người đeo kính.
 3. Đặt tất cả vào thư mục `images/` trong repo.
 4. *Tùy chọn:* chụp thêm 5 ảnh **lóa thật** (đứng cạnh cửa sổ nắng hoặc rọi đèn pin vào mặt) để vào thư mục `real_glare/`. Bộ này dùng để so sánh lóa nhân tạo với lóa thật.
 
-## Thành viên 3: Chạy code (phút 40-70)
+## Thành viên 3 — Đoàn Anh Quân (2A202602803): Chạy code (phút 40-70)
 
 1. Cài môi trường:
 
@@ -55,7 +65,7 @@ Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút là
 4. Chạy thêm với ảnh lóa thật nếu có: `--images ./real_glare --out ./results_real`.
 5. Chụp màn hình terminal, rồi commit cả thư mục `results/` lên repo.
 
-## Thành viên 4: Benchmark và phân tích (phút 70-100)
+## Thành viên 4 — Nguyễn Phúc Huy (2A202602911): Benchmark và phân tích (phút 70-100)
 
 1. Mở `results/summary.csv` và điền bảng:
 
@@ -78,7 +88,7 @@ Chủ đề T1: Camera degradation health score. Nhóm 5 người, 120 phút là
    - Dùng auto-exposure theo vùng mặt.
    - Dùng detector deep learning (YuNet, RetinaFace) bền hơn Haar.
 
-## Thành viên 5: Trình bày (phút 95-120)
+## Thành viên 5 — Trần Thị Lan (2A202602621): Trình bày (phút 95-120)
 
 1. Làm **1 slide** theo mẫu trang 8 của đề:
    - **Problem:** DMS cần thấy mặt tài xế, nắng làm mặt cháy sáng.
