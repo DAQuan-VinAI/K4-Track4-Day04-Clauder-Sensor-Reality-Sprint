@@ -71,7 +71,7 @@ Mục này chỉ ghi **tài liệu nói gì**. Số liệu nhóm tự đo nằm 
 
 1. **Recall bắt đầu tụt ở mức lóa 2:** 100% (mức 0-1) → **64,29%** (mức 2) → 14,29% (mức 3) → 0% (mức 4). Mức 1 lóa đã làm mặt sáng lên (độ sáng vùng mặt 124 → 179) và IoU tụt nhẹ (1,00 → 0,96) nhưng detector **vẫn còn thấy mặt**. Đến mức 2 thì bắt đầu mất hàng loạt.
 2. **Ngưỡng health score ≈ 30% pixel bão hòa trên mặt.** Khi recall bắt đầu tụt (mức 2), trung bình **32,31%** diện tích vùng mặt đã bão hòa trắng; ở mức 1 chỉ 3,89% nên vẫn an toàn. Vì vậy lấy **~30%** làm ngưỡng cảnh báo "camera không đáng tin", còn dưới ~5% coi như bình thường. *Lưu ý:* đây là ngưỡng trung bình; từng ảnh chịu được khác nhau (xem 2.3), nên thực tế nên để vùng đệm và tính theo từng frame.
-3. **Có false positive, nhưng thưa.** Ảnh **07.jpg** ở ảnh gốc *không có mặt*, vậy mà ở mức lóa 1 Haar nhận nhầm ra 1 "mặt" (`false_pos = 1`). Trên 14 ảnh có mặt, chỉ **37.jpg** sinh thêm box lạ ở mức 3-4, đưa số false positive lên **0,07 box/ảnh**. Đúng như dự đoán ở mục 1.3: lóa làm vùng hoa văn sáng tối giống mặt bị nhận nhầm.
+3. **Có false positive, nhưng thưa.** Ảnh **07.jpg** có mặt người nhưng Haar không tìm ra ở ảnh gốc (nên ảnh này không tính vào recall); ở mức lóa 1 Haar lại trả về 1 box nằm trên mảng tường, không phải trên mặt (`false_pos = 1`). Trên 14 ảnh có mặt, chỉ **37.jpg** sinh thêm box lạ ở mức 3-4, đưa số false positive lên **0,07 box/ảnh**. Đúng như dự đoán ở mục 1.3: lóa làm vùng hoa văn sáng tối giống mặt bị nhận nhầm.
 
 ### 2.2. Failure case
 
@@ -106,4 +106,4 @@ Chạy trên 24 ảnh trong `software_glare/` (ảnh chụp đã có lóa sẵn,
 | 3 | 0.00 | 95.71 | 0.00 |
 | 4 | 0.00 | 99.08 | 0.00 |
 
-Xu hướng giống hệt nhưng **sụp sớm hơn**: recall rơi ngay từ mức 1 và về 0 ở mức 2. Lý do: nền ảnh đã chói sẵn (baseline đã có 4,25% bão hòa, độ sáng vùng mặt 172 so với 124 ở bộ sạch) nên chịu được ít lóa hơn. Kết luận: **lóa thật nguy hiểm hơn lóa nhân tạo**, và ngưỡng health score nên hiệu chỉnh theo điều kiện ánh sáng nền.
+Xu hướng giống hệt nhưng **sụp sớm hơn**: recall rơi ngay từ mức 1 và về 0 ở mức 2. Lý do: nền ảnh đã chói sẵn (baseline đã có 4,25% bão hòa, độ sáng vùng mặt 172 so với 124 ở bộ sạch) nên chịu được ít lóa hơn. Kết luận: **ảnh nền đã chói sẵn thì chịu được ít lóa hơn**, nên ngưỡng health score cần hiệu chỉnh theo điều kiện ánh sáng nền. *Lưu ý:* lóa trong bộ này là hiệu ứng phần mềm, không phải lóa thật; nhóm **chưa có số đo nào trên lóa thật**.
