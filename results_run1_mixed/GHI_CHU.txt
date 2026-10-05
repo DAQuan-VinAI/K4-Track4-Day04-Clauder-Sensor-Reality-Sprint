@@ -1,0 +1,4 @@
+KHONG dung so lieu trong thu muc nay de phan tich.
+Day la lan chay dau (17:14, 40 anh) khi images/ con lan 24 anh da co loa san,
+nen baseline khong phai anh goc. Giu lai lam log + anh chup terminal.
+So lieu dung: results/ (16 anh sach) va results_real/ (24 anh da co loa san).
