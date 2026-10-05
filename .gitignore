@@ -1,0 +1,14 @@
+# Moi truong Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Bien moi truong / bi mat
+.env
+
+# He dieu hanh, editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

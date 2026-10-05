@@ -1,0 +1,9 @@
+# Sensor Reality Sprint - T1 face glare benchmark
+# Cai dat: pip install -r requirements.txt
+opencv-python>=4.8,<5   # OpenCV 5 da bo Haar cascade
+numpy
+pandas
+matplotlib
+
+# Du phong: chi can khi khong cai duoc OpenCV 4 (script tu chuyen sang LBP cascade)
+# scikit-image
